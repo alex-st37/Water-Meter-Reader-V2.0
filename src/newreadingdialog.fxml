@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:id="NewReadingDialog"
+            fx:controller="sample.NewReadingController"
+            prefHeight="300.0" prefWidth="650.0">
+
+    <headerText>
+        Please enter the information for a new Water Meter Reading!
+    </headerText>
+
+    <content>
+
+        <GridPane vgap="10" hgap="10">
+
+            <rowConstraints>
+                <RowConstraints prefHeight="40"/>
+                <RowConstraints prefHeight="40"/>
+                <RowConstraints prefHeight="40"/>
+            </rowConstraints>
+
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints prefWidth="120"/>
+            </columnConstraints>
+
+            <Label text="Date" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <DatePicker fx:id="datePicker" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+
+            <Label text="Cold Water Index" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="coldField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label text="m³" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <Label fx:id="coldAlert" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+            <Label text="Hot Water Index" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="hotField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <Label text="m³" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+            <Label fx:id="hotAlert" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+        </GridPane>
+
+    </content>
+
+
+</DialogPane>

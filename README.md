@@ -77,14 +77,13 @@ This way, the residents will no longer need to keep records on paper, to manuall
 9. Successfully generated consumption flyer:
 ![wmr11](https://user-images.githubusercontent.com/90447306/135438550-98182819-be8c-43d0-a2b4-344da817d612.jpg)
 
-
-
-
-
 ## How to Download
-To run the program please download the .jar file uploaded in the repository.
+To run the application please download one of the three version from the "Run" repository:
+1. **Water Meter Reader JavaFX** - executable .jar file compiled in Java 11, which needs the same version of Java Runtime to run.
+2. **Water_Meter_Reader_JvaFX_Windows** - archived version for Windows OS
+3. **Water_Meter_Reader_JvaFX2_Mac** - archived version for Mac OS
 
 ## Future Features
-- Adding a GUI to the application.
+- Implementing the option to add two or more water meter readers for hoses with multiple water meter readers.
 
 

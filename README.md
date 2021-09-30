@@ -34,11 +34,21 @@ This way, the residents will no longer need to keep records on paper, to manuall
 3. **The successfully generated text file will open automatically after the user presses the ok button**.
 
 #### About the feature to delete the last item:
-1. **The program allows the user to delete the last recorded water meter reading only once**, until a new water meter reading is added or the entire history of readings is cleared. The reason for this restriction is that, in real lfe, a data registry in which all of the entries could be modified one by one would no longer be reliable or trusty.
+1. **The program allows the user to delete the last recorded water meter reading only once**, until a new water meter reading is added. The reason for this restriction is that, in real lfe, a data registry in which all of the entries could be modified one by one would no longer be reliable or trusty.
 2. **The choice to delete the last element of the water meter readings history is saved in a text file and reloaded each time the application is restarted, so the "deleting the last element only once" feature can not be fooled by exiting and restarting the program**.
 3. Before proceeding to the deletion of the last entry, **the program displays a confirmation alert** for the user to confirm its intention.
 
 #### Other technical features:
+1. **The user's input is checked for every feature of the application, so that any possible exception that could crush the program is avoided (e.g. NumberFormatException, DateTimeException etc.).**
+2. **The datbase of water meter readings is saved in a text file in key moments in the life cycle of the application** - e.g. after adding a new reading, after deleting an old one, before quiting the program etc.
+3. As I wrote above, the user cand delete the last entry only once, until he enters a new one. So, **the availability of this option is expressed in the code by using a variable of type int, which holds the value 0 when the user is allowed to delete the last entry and the value 1 when he isn't allowed. This value is written in a text file and reloaded each time the aplication is started**. This way the program keeps track of a possible deletion, even if the program has been shut down.
+4. The program contains blocks of code that **verifies if one of the above text files exists, before loading them, so that a possible FileNotFoundEception is avoided** (for the situation where the user accidentally or intentionally deletes one or both files).
+5. **The dates displayed by the program are formatted to be shown in the European format (dd-MM-yyyy)**.
+6. The numeric values of the cold and hot water levels are **rounded to two decimals** and displayed accordingly.
+7. Displaying the date in the European format and the numeric values with to decimals in the TableView were achieved by **setting the cell factory of the coresponding table columns**.
+
+
+5. The choice to delete the last element of the water meter readings history is saved in a text file and reloaded each time the application is restarted, so the "deleting the last element only once" feature can not be fooled by exiting and restarting the program.
 
 
 1. The user's input is checked whenever he gives a command, so that any possible exception that could crush the program are avoided (e.g. NumberFormatException, DateTimeException etc.).
